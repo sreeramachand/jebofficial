@@ -1,0 +1,2 @@
+create an .env.local and .env.production
+PUBLIC_SITE_URL=http://localhost:5173
