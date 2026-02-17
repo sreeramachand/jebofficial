@@ -95,30 +95,31 @@
           <li class="row-span-3 mb-2 sm:mb-0">
             <NavigationMenu.Link
               href="/"
-              class="from-muted/50 to-muted bg-linear-to-b outline-hidden flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline focus:shadow-md"
+              class="from-muted/50 to-muted bg-linear-to-b outline-hidden flex h-full w-full select-none flex-col justify-end rounded-md no-underline focus:shadow-md"
             >
               <!-- <Icons.logo class="h-6 w-6" /> -->
-              <div class="mb-2 mt-4 text-lg font-medium">Bits UI</div>
+               <img src={jebLogo} alt="Joy Eternal Bliss Logo" class="size-40 -mt-8">
+              <div class="text-lg -mt-4 font-medium">Joy Eternal Bliss</div>
               <p class="text-muted-foreground text-sm leading-tight">
-                The headless components for Svelte.
+                Learning. Creating. Discovery.
               </p>
             </NavigationMenu.Link>
           </li>
  
           {@render ListItem({
-            href: "/docs",
-            title: "Introduction",
-            content: "Headless components for Svelte and SvelteKit"
+            href: "/stories",
+            title: "StoryCentral",
+            content: "Explore Morals, Philosophy, and Short Stories!"
           })}
           {@render ListItem({
-            href: "/docs/getting-started",
-            title: "Getting Started",
-            content: "How to install and use Bits UI"
+            href: "/storefront",
+            title: "J.E.B. Storefront",
+            content: "Browse and purchase Joy Eternal Bliss merch!"
           })}
           {@render ListItem({
-            href: "/docs/styling",
-            title: "Styling",
-            content: "How to style Bits UI components"
+            href: "/appcenter",
+            title: "Technology & Gaming",
+            content: "Learn and Explore Technology Hands On!"
           })}
         </ul>
       </NavigationMenu.Content>
@@ -134,7 +135,7 @@
         />
       </NavigationMenu.Trigger>
       <NavigationMenu.Content 
-        class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute left-0 top-0 w-full sm:w-auto"
+        class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute left-0 top-0 w-full bg-zinc-50 sm:w-auto"
       >
         <ul
           class="grid gap-3 p-3 sm:w-[400px] sm:p-6 md:w-[500px] md:grid-cols-2 lg:w-[600px]"
@@ -154,8 +155,7 @@
         class="inline-flex justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
         href="/docs"
       >
-        <span class="hidden sm:inline"> Documentation </span>
-        <span class="inline sm:hidden"> Docs </span>
+        <span class="hidden sm:inline"> Newsletter & Blog </span>
       </NavigationMenu.Link>
     </NavigationMenu.Item>
     <NavigationMenu.Indicator
