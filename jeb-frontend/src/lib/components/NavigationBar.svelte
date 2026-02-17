@@ -90,7 +90,7 @@
         class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left h-full w-full sm:w-auto bg-zinc-50"
       >
         <ul
-          class="m-0 grid list-none gap-x-2.5 p-3 sm:w-[600px] sm:grid-flow-col sm:grid-rows-3 sm:p-[22px]"
+          class="m-0 grid list-none -py-2 gap-x-2.5 p-2 sm:h-[250px] sm:w-[525px] sm:grid-flow-col sm:grid-rows-3 sm:p-[14px]"
         >
           <li class="row-span-3 mb-2 sm:mb-0">
             <NavigationMenu.Link
@@ -98,8 +98,8 @@
               class="from-muted/50 to-muted bg-linear-to-b outline-hidden flex h-full w-full select-none flex-col justify-end rounded-md no-underline focus:shadow-md"
             >
               <!-- <Icons.logo class="h-6 w-6" /> -->
-               <img src={jebLogo} alt="Joy Eternal Bliss Logo" class="size-40 -mt-8">
-              <div class="text-lg -mt-4 font-medium">Joy Eternal Bliss</div>
+               <img src={jebLogo} alt="Joy Eternal Bliss Logo" class="size-40">
+              <div class="text-lg font-medium">Joy Eternal Bliss</div>
               <p class="text-muted-foreground text-sm leading-tight">
                 Learning. Creating. Discovery.
               </p>
@@ -107,19 +107,19 @@
           </li>
  
           {@render ListItem({
-            href: "/stories",
+            href: "/storycentral",
             title: "StoryCentral",
-            content: "Explore Morals, Philosophy, and Short Stories!"
+            content: "Explore Quizzes, Philosophy, and Short Stories!"
           })}
           {@render ListItem({
             href: "/storefront",
             title: "J.E.B. Storefront",
-            content: "Browse and purchase Joy Eternal Bliss merch!"
+            content: "Browse and purchase Joy Eternal Bliss products!"
           })}
           {@render ListItem({
             href: "/appcenter",
             title: "Technology & Gaming",
-            content: "Learn and Explore Technology Hands On!"
+            content: "Learn Technology Hands-On and Play Games!"
           })}
         </ul>
       </NavigationMenu.Content>
@@ -128,7 +128,7 @@
       <NavigationMenu.Trigger
         class="inline-flex justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
       >
-        Components
+        Categories
         <CaretDown
           class="relative top-[1px] ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
           aria-hidden="true"
@@ -140,13 +140,37 @@
         <ul
           class="grid gap-3 p-3 sm:w-[400px] sm:p-6 md:w-[500px] md:grid-cols-2 lg:w-[600px]"
         >
-          {#each components as component (component.title)}
             {@render ListItem({
-              href: component.href,
-              title: component.title,
-              content: component.description
+              href: "/storycentral/quizzes",
+              title: "Quizzes",
+              content: "Explore your philosophical side with fun quizzes and games!"
             })}
-          {/each}
+            {@render ListItem({
+              href: "/storycentral/stories",
+              title: "Stories",
+              content: "Dive into captivating short stories that spark imagination!"
+            })}
+            {@render ListItem({
+              href: "/storefront",
+              title: "Shopping",
+              content: "Browse and purchase Joy Eternal Bliss merch and products!"
+            })}
+            {@render ListItem({
+              href: "/appcenter/technology",
+              title: "Technology",
+              content: "Learn about the latest in technology to build your future!"
+            })}
+            {@render ListItem({
+              href: "/appcenter/gaming",
+              title: "Gaming",
+              content: "Play and explore the latest in modern gaming and development!"
+            })}
+            {@render ListItem({
+              href: "/contact",
+              title: "Contact Us",
+              content: "Get in touch with Joy Eternal Bliss For Business Inquiries!"
+            })}
+          
         </ul>
       </NavigationMenu.Content>
     </NavigationMenu.Item>
