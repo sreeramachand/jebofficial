@@ -2,6 +2,7 @@
   import { NavigationMenu } from "bits-ui";
   import { Collapsible } from "bits-ui";
   import CaretDownIcon from "phosphor-svelte/lib/CaretDownIcon";
+  import CaretUpDown from "phosphor-svelte/lib/CaretUpDown";
   import cn from "clsx";
   import jebLogo from "$lib/assets/jeb-logo.png";
   import Button from "./ui/Button.svelte";
@@ -86,10 +87,13 @@
  
 
 <NavigationMenu.Root class="z-10 inline-flex w-full items-center bg-blue-100 bg-blur-md sticky top-0">
-    <div class="float-left ml-4 relative inline-flex items-center gap-2">
+    <div class="float-left ml-4 relative">
+      <a href="/" class="inline-flex items-center gap-2">
         <img src={jebLogo} alt="joy eternal bliss logo" class="size-20">
         <h1 class="text-xl font-medium font-['Lobster_Two']">joyeternalbliss</h1>
+      </a>
     </div>
+    <!-- when you add left-[] margins don't work!-->
    <div id="nav-content" class="ml-64 relative hidden lg:flex">
   <NavigationMenu.List
     class="group flex list-none items-center justify-center p-1 gap-[3.9rem]"
@@ -197,7 +201,7 @@
         class="inline-flex font-['Inter'] justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
         href="/docs"
       >
-        <span class="hidden font-['Inter'] sm:inline"> Newsletter & Blog </span>
+        <span class="hidden font-['Inter'] sm:inline"><a href="/blog"> Newsletter & Blog </a></span>
       </NavigationMenu.Link>
     </NavigationMenu.Item>
     <NavigationMenu.Indicator
@@ -235,8 +239,9 @@
 
 
 <!-- Sidebar -->
+ <!-- Don't use overflow: hidden; that prevents scrolling. -->
 <aside
-  class="fixed overflow-hidden top-0 right-0 h-full w-64 bg-white shadow-xl
+  class="fixed overflow-auto top-0 right-0 h-full w-64 backdrop-blur-md bg-blue-100/30 shadow-xl
          transition-transform duration-300 ease-in-out
          {isOpen ? 'translate-x-0' : 'translate-x-full'}"
 >
@@ -252,11 +257,88 @@
     >
       <img src="/arrow-circle-right.svg" alt="Close navigation menu icon" class="size-10 relative">
     </button>
-    <h2 class="text-lg font-semibold mb-4">Menu</h2>
+    <h2 class="text-lg -mt-2 font-semibold mb-8">Navigation</h2>
     <ul class="space-y-3">
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
+      <li><Collapsible.Root class=" space-y-3">
+  <div class="flex items-center justify-between space-x-10">
+    <h4 class="text-[15px] font-medium">Getting Started</h4>
+    <Collapsible.Trigger
+      class="rounded-9px border-border-input bg-background-alt text-foreground shadow-btn hover:bg-muted inline-flex h-10 w-10 items-center justify-center border transition-all active:scale-[0.98]"
+      aria-label="Show starred repositories"
+    >
+      <CaretUpDown class="size-4" weight="bold" />
+    </Collapsible.Trigger>
+  </div>
+ 
+  <Collapsible.Content
+    hiddenUntilFound
+    class="data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up space-y-2 overflow-hidden font-mono text-[15px] tracking-[0.01em]"
+  >
+    <div
+      class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
+    >
+      <a href="/storycentral">StoryCentral</a>
+    </div>
+    <div
+      class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
+    >
+      <a href="/storefront">J.E.B. Storefront</a>
+    </div>
+    <div
+      class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
+    >
+      <a href="/appcenter">Technology & Gaming</a>
+    </div>
+  </Collapsible.Content>
+</Collapsible.Root></li>
+      <li><Collapsible.Root class=" space-y-3">
+  <div class="flex items-center justify-between space-x-10">
+    <h4 class="text-[15px] font-medium">Categories</h4>
+    <Collapsible.Trigger
+      class="rounded-9px border-border-input bg-background-alt text-foreground shadow-btn hover:bg-muted inline-flex h-10 w-10 items-center justify-center border transition-all active:scale-[0.98]"
+      aria-label="Show starred repositories"
+    >
+      <CaretUpDown class="size-4" weight="bold" />
+    </Collapsible.Trigger>
+  </div>
+ 
+  <Collapsible.Content
+    hiddenUntilFound
+    class="data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up space-y-2 overflow-hidden font-mono text-[15px] tracking-[0.01em]"
+  >
+    <div
+      class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
+    >
+      @huntabyte/bits-ui
+    </div>
+    <div
+      class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
+    >
+      @huntabyte/shadcn-svelte
+    </div>
+    <div
+      class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
+    >
+      @svecosystem/runed
+    </div>
+    <div
+      class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
+    >
+      @svecosystem/runed
+    </div>
+    <div
+      class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
+    >
+      @svecosystem/runed
+    </div>
+    <div
+      class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
+    >
+      @svecosystem/runed
+    </div>
+  </Collapsible.Content>
+</Collapsible.Root></li>
+      <li><a href="/blog"><h4>Blog & Newsletter</h4></a></li>
     </ul>
   </div>
 </aside>
