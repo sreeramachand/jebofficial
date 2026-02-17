@@ -68,26 +68,26 @@
 {/snippet}
  
 
-<NavigationMenu.Root class="relative z-10 flex w-full items-center">
+<NavigationMenu.Root class="z-10 flex w-full items-center bg-blue-100 bg-blur-md sticky top-0">
     <div class="left-[2rem] relative">
         <img src={jebLogo} alt="joy eternal bliss logo" class="size-20">
     </div>
    <div id="nav-content" class="relative left-[30%]">
   <NavigationMenu.List
-    class="group flex list-none items-center justify-center p-1 gap-[3.5rem]"
+    class="group flex list-none items-center justify-center p-1 gap-[3.9rem]"
   >
     <NavigationMenu.Item value="getting-started">
       <NavigationMenu.Trigger
-        class="hover:text-accent-foreground focus-visible:bg-muted focus-visible:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus-visible:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-white disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-white gap-1"
+        class="inline-flex justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
       >
-        Getting started
+        Getting Started
         <CaretDown
           class="relative top-[1px] ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
           aria-hidden="true"
         />
       </NavigationMenu.Trigger>
       <NavigationMenu.Content 
-        class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute left-0 top-0 w-full sm:w-auto"
+        class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left h-full w-full sm:w-auto bg-zinc-50"
       >
         <ul
           class="m-0 grid list-none gap-x-2.5 p-3 sm:w-[600px] sm:grid-flow-col sm:grid-rows-3 sm:p-[22px]"
@@ -125,7 +125,7 @@
     </NavigationMenu.Item>
     <NavigationMenu.Item>
       <NavigationMenu.Trigger
-        class="hover:text-accent-foreground focus-visible:bg-muted focus-visible:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus-visible:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-white disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-white gap-1"
+        class="inline-flex justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
       >
         Components
         <CaretDown
@@ -151,7 +151,7 @@
     </NavigationMenu.Item>
     <NavigationMenu.Item>
       <NavigationMenu.Link
-        class="hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground data-[state=open]:shadow-mini dark:hover:bg-muted dark:data-[state=open]:bg-muted focus:outline-hidden group inline-flex h-8 w-max items-center justify-center rounded-[7px] bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-white disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-white"
+        class="inline-flex justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
         href="/docs"
       >
         <span class="hidden sm:inline"> Documentation </span>
