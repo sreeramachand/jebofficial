@@ -36,24 +36,43 @@
 </script>
 
 <svelte:head>
+	<!-- Favicon -->
 	<link rel="icon" href={jebLogo} />
+
+	<!-- Preload fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+	<!-- Phosphor Icons -->
+	 <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+
+	<!-- Page Title -->
 	<title>{fullTitle}</title>
 
+	<!-- SEO Meta Tags -->
 	<meta name="description" content={seo.description} />
 	<meta name="robots" content={seo.robots} />
 	<link rel="canonical" href={seo.canonical} />
 
+	<!-- Open Graph / Facebook -->
 	<meta property="og:title" content={fullTitle} />
 	<meta property="og:description" content={seo.description} />
 	<meta property="og:type" content={seo.og.type} />
 	<meta property="og:url" content={seo.canonical} />
 	<meta property="og:image" content={ogImage} />
 
+	<!-- Twitter -->
 	<meta name="twitter:card" content={seo.twitter.card} />
 	<meta name="twitter:title" content={fullTitle} />
 	<meta name="twitter:description" content={seo.description} />

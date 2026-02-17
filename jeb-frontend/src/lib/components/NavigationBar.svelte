@@ -1,8 +1,10 @@
 <script lang="ts">
   import { NavigationMenu } from "bits-ui";
-  import CaretDown from "phosphor-svelte/lib/CaretDown";
+  import { Collapsible } from "bits-ui";
+  import CaretDownIcon from "phosphor-svelte/lib/CaretDownIcon";
   import cn from "clsx";
   import jebLogo from "$lib/assets/jeb-logo.png";
+  import Button from "./ui/Button.svelte";
 
   const components: { title: string; href: string; description: string }[] = [
     {
@@ -48,6 +50,21 @@
     href: string;
     content: string;
   };
+
+  /* Mobile Nav */
+  let isOpen = $state(false);
+
+  function openSidebar() {
+    isOpen = true;
+  }
+
+  function closeSidebar() {
+    isOpen = false;
+  }
+
+  function toggleSidebar() {
+    isOpen = !isOpen;
+  }
 </script>
  
 {#snippet ListItem({ className, title, content, href }: ListItemProps)}
@@ -68,12 +85,12 @@
 {/snippet}
  
 
-<NavigationMenu.Root class="z-10 flex w-full items-center bg-blue-100 bg-blur-md sticky top-0">
+<NavigationMenu.Root class="z-10 flex w-full items-center bg-blue-100 bg-blur-md sticky gap-[23vw] top-0">
     <div class="left-[2rem] relative inline-flex items-center gap-2">
         <img src={jebLogo} alt="joy eternal bliss logo" class="size-20">
         <h1 class="text-xl font-medium font-['Lobster_Two']">joyeternalbliss</h1>
     </div>
-   <div id="nav-content" class="relative left-[30%]">
+   <div id="nav-content" class="relative hidden lg:flex">
   <NavigationMenu.List
     class="group flex list-none items-center justify-center p-1 gap-[3.9rem]"
   >
@@ -82,7 +99,7 @@
         class="inline-flex justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1 font-['Inter']"
       >
         Getting Started
-        <CaretDown
+        <CaretDownIcon
           class="relative top-[1px] ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
           aria-hidden="true"
         />
@@ -130,7 +147,7 @@
         class="inline-flex justify-center font-['Inter'] items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
       >
         Categories
-        <CaretDown
+        <CaretDownIcon
           class="relative top-[1px] ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
           aria-hidden="true"
         />
@@ -199,4 +216,47 @@
     />
   </div>
   </div>
+<!-- Mobile Navigation Button -->
+<div class="relative lg:hidden">
+  <button
+    type="button"
+    onclick={toggleSidebar}
+    class="p-4 rounded-xl transition duration-200
+           hover:bg-gray-100 hover:shadow-md
+           focus:outline-none focus:ring-4 focus:ring-gray-200"
+    aria-expanded={isOpen}
+  >
+    <img
+      src="/list.svg"
+      alt="Open navigation menu"
+      class="size-6"
+    />
+  </button>
+
+
+<!-- Sidebar -->
+<aside
+  class="fixed overflow-hidden top-0 right-0 h-full w-64 bg-white shadow-xl
+         transition-transform duration-300 ease-in-out
+         {isOpen ? 'translate-x-0' : 'translate-x-full'}"
+>
+  <div class="p-6 block">
+    <button
+    title="Close navigation menu"
+    type="button"
+    onclick={toggleSidebar}
+    aria-expanded={!isOpen}
+    class="hover:shadow-lg hover:-translate-px relative -right-40 -top-4 p-1 rounded-full transition duration-200 focus:outline-none focus:ring-4 focus:ring-gray-200"
+    >
+      <img src="/arrow-circle-right.svg" alt="Close navigation menu icon" class="size-10 relative">
+    </button>
+    <h2 class="text-lg font-semibold mb-4">Menu</h2>
+    <ul class="space-y-3">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+</aside>
+</div>
 </NavigationMenu.Root>
