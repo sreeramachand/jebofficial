@@ -54,7 +54,7 @@
   <li>
     <NavigationMenu.Link
       class={cn(
-        "hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground outline-hidden block select-none space-y-1 rounded-md p-3 leading-none no-underline transition-colors",
+        "hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground font-['Inter'] outline-hidden block select-none space-y-1 rounded-md p-3 leading-none no-underline transition-colors",
         className
       )}
       {href}
@@ -69,8 +69,9 @@
  
 
 <NavigationMenu.Root class="z-10 flex w-full items-center bg-blue-100 bg-blur-md sticky top-0">
-    <div class="left-[2rem] relative">
+    <div class="left-[2rem] relative inline-flex items-center gap-2">
         <img src={jebLogo} alt="joy eternal bliss logo" class="size-20">
+        <h1 class="text-xl font-medium font-['Lobster_Two']">joyeternalbliss</h1>
     </div>
    <div id="nav-content" class="relative left-[30%]">
   <NavigationMenu.List
@@ -78,7 +79,7 @@
   >
     <NavigationMenu.Item value="getting-started">
       <NavigationMenu.Trigger
-        class="inline-flex justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
+        class="inline-flex justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1 font-['Inter']"
       >
         Getting Started
         <CaretDown
@@ -87,7 +88,7 @@
         />
       </NavigationMenu.Trigger>
       <NavigationMenu.Content 
-        class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left h-full w-full sm:w-auto bg-zinc-50"
+        class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left h-full w-full sm:w-auto font-['Inter'] bg-zinc-50"
       >
         <ul
           class="m-0 grid list-none -py-2 gap-x-2.5 p-2 sm:h-[250px] sm:w-[525px] sm:grid-flow-col sm:grid-rows-3 sm:p-[14px]"
@@ -99,8 +100,8 @@
             >
               <!-- <Icons.logo class="h-6 w-6" /> -->
                <img src={jebLogo} alt="Joy Eternal Bliss Logo" class="size-40">
-              <div class="text-lg font-medium">Joy Eternal Bliss</div>
-              <p class="text-muted-foreground text-sm leading-tight">
+              <div class="text-lg font-medium font-['Inter']">Joy Eternal Bliss</div>
+              <p class="text-muted-foreground font-['Inter'] text-sm leading-tight">
                 Learning. Creating. Discovery.
               </p>
             </NavigationMenu.Link>
@@ -126,7 +127,7 @@
     </NavigationMenu.Item>
     <NavigationMenu.Item>
       <NavigationMenu.Trigger
-        class="inline-flex justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
+        class="inline-flex justify-center font-['Inter'] items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
       >
         Categories
         <CaretDown
@@ -135,7 +136,7 @@
         />
       </NavigationMenu.Trigger>
       <NavigationMenu.Content 
-        class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute left-0 top-0 w-full bg-zinc-50 sm:w-auto"
+        class="data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left absolute font-['Inter'] left-0 top-0 w-full bg-zinc-50 sm:w-auto"
       >
         <ul
           class="grid gap-3 p-3 sm:w-[400px] sm:p-6 md:w-[500px] md:grid-cols-2 lg:w-[600px]"
@@ -176,10 +177,10 @@
     </NavigationMenu.Item>
     <NavigationMenu.Item>
       <NavigationMenu.Link
-        class="inline-flex justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
+        class="inline-flex font-['Inter'] justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
         href="/docs"
       >
-        <span class="hidden sm:inline"> Newsletter & Blog </span>
+        <span class="hidden font-['Inter'] sm:inline"> Newsletter & Blog </span>
       </NavigationMenu.Link>
     </NavigationMenu.Item>
     <NavigationMenu.Indicator
