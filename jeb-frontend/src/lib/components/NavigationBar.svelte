@@ -263,7 +263,7 @@
     <ul class="space-y-3">
       <li><Collapsible.Root class=" space-y-3">
   <div class="flex items-center justify-between space-x-10">
-    <h4 class="text-[15px] font-medium">Getting Started</h4>
+    <h4 class="text-[15px]">Getting Started</h4>
     <Collapsible.Trigger
       class="rounded-9px bg-background-alt text-foreground shadow-btn hover:bg-muted inline-flex h-10 w-10 items-center justify-center transition-all active:scale-[0.98]"
       aria-label="Show starred repositories"
@@ -295,7 +295,7 @@
 </Collapsible.Root></li>
       <li><Collapsible.Root class=" space-y-3">
   <div class="flex items-center justify-between space-x-10">
-    <h4 class="text-[15px] font-medium">Categories</h4>
+    <h4 class="text-[15px]">Categories</h4>
     <Collapsible.Trigger
       class="rounded-9px bg-background-alt text-foreground shadow-btn hover:bg-muted inline-flex h-10 w-10 items-center justify-center transition-all active:scale-[0.98]"
       aria-label="Show starred repositories"
@@ -340,7 +340,7 @@
     </div>
   </Collapsible.Content>
 </Collapsible.Root></li>
-      <li><a href="/blog"><h4>Blog & Newsletter</h4></a></li>
+      <li><a href="/blog"><h4 class="text-[15px]">Blog & Newsletter</h4></a></li>
     </ul>
   </div>
 </aside>
