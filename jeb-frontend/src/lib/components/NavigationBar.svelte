@@ -2,12 +2,13 @@
   import { NavigationMenu } from "bits-ui";
   import { Collapsible } from "bits-ui";
   import CaretDownIcon from "phosphor-svelte/lib/CaretDownIcon";
-  import CaretUpDown from "phosphor-svelte/lib/CaretUpDown";
   import cn from "clsx";
   import jebLogo from "$lib/assets/jeb-logo.png";
   import Button from "./ui/Button.svelte";
+  import { CaretCircleUpDownIcon } from "phosphor-svelte";
 
-  const components: { title: string; href: string; description: string }[] = [
+  /*
+   * const components: { title: string; href: string; description: string }[] = [
     {
       title: "Alert Dialog",
       href: "/docs/components/alert-dialog",
@@ -44,6 +45,7 @@
         "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it."
     }
   ];
+   */
  
   type ListItemProps = {
     className?: string;
@@ -199,9 +201,9 @@
     <NavigationMenu.Item>
       <NavigationMenu.Link
         class="inline-flex font-['Inter'] justify-center items-center focus-visible:bg-zinc-50 group rounded-[7px] bg-inherit h-8 w-max px-[1.15rem] py-4 text-sm font-medium transition-colors hover:bg-blue-50 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-blue-50 gap-1"
-        href="/docs"
+        href="/blog"
       >
-        <span class="hidden font-['Inter'] sm:inline"><a href="/blog"> Newsletter & Blog </a></span>
+        <span class="hidden font-['Inter'] sm:inline">Newsletter & Blog</span>
       </NavigationMenu.Link>
     </NavigationMenu.Item>
     <NavigationMenu.Indicator
@@ -263,10 +265,10 @@
   <div class="flex items-center justify-between space-x-10">
     <h4 class="text-[15px] font-medium">Getting Started</h4>
     <Collapsible.Trigger
-      class="rounded-9px border-border-input bg-background-alt text-foreground shadow-btn hover:bg-muted inline-flex h-10 w-10 items-center justify-center border transition-all active:scale-[0.98]"
+      class="rounded-9px bg-background-alt text-foreground shadow-btn hover:bg-muted inline-flex h-10 w-10 items-center justify-center transition-all active:scale-[0.98]"
       aria-label="Show starred repositories"
     >
-      <CaretUpDown class="size-4" weight="bold" />
+      <CaretCircleUpDownIcon class="size-6 rounded-xl" />
     </Collapsible.Trigger>
   </div>
  
@@ -295,10 +297,10 @@
   <div class="flex items-center justify-between space-x-10">
     <h4 class="text-[15px] font-medium">Categories</h4>
     <Collapsible.Trigger
-      class="rounded-9px border-border-input bg-background-alt text-foreground shadow-btn hover:bg-muted inline-flex h-10 w-10 items-center justify-center border transition-all active:scale-[0.98]"
+      class="rounded-9px bg-background-alt text-foreground shadow-btn hover:bg-muted inline-flex h-10 w-10 items-center justify-center transition-all active:scale-[0.98]"
       aria-label="Show starred repositories"
     >
-      <CaretUpDown class="size-4" weight="bold" />
+      <CaretCircleUpDownIcon class="size-6" />
     </Collapsible.Trigger>
   </div>
  
@@ -309,32 +311,32 @@
     <div
       class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
     >
-      @huntabyte/bits-ui
+      <a href="/storycentral/quizzes">Quizzes</a>
     </div>
     <div
       class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
     >
-      @huntabyte/shadcn-svelte
+      <a href="/storycentral/stories">Stories</a>
     </div>
     <div
       class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
     >
-      @svecosystem/runed
+      <a href="/storefront">Storefront</a>
     </div>
     <div
       class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
     >
-      @svecosystem/runed
+      <a href="/appcenter/technology">Technology</a>
     </div>
     <div
       class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
     >
-      @svecosystem/runed
+      <a href="/appcenter/gaming">Gaming</a>
     </div>
     <div
       class="rounded-9px bg-muted inline-flex h-12 w-full items-center px-[18px] py-3"
     >
-      @svecosystem/runed
+      <a href="/contact">Contact Us</a>
     </div>
   </Collapsible.Content>
 </Collapsible.Root></li>
