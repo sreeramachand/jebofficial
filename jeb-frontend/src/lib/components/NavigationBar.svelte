@@ -85,12 +85,12 @@
 {/snippet}
  
 
-<NavigationMenu.Root class="z-10 flex w-full items-center bg-blue-100 bg-blur-md sticky gap-[23vw] top-0">
-    <div class="left-[2rem] relative inline-flex items-center gap-2">
+<NavigationMenu.Root class="z-10 inline-flex w-full items-center bg-blue-100 bg-blur-md sticky top-0">
+    <div class="float-left ml-4 relative inline-flex items-center gap-2">
         <img src={jebLogo} alt="joy eternal bliss logo" class="size-20">
         <h1 class="text-xl font-medium font-['Lobster_Two']">joyeternalbliss</h1>
     </div>
-   <div id="nav-content" class="relative hidden lg:flex">
+   <div id="nav-content" class="ml-64 relative hidden lg:flex">
   <NavigationMenu.List
     class="group flex list-none items-center justify-center p-1 gap-[3.9rem]"
   >
@@ -217,7 +217,7 @@
   </div>
   </div>
 <!-- Mobile Navigation Button -->
-<div class="relative lg:hidden">
+<div class=" absolute right-8 lg:hidden">
   <button
     type="button"
     onclick={toggleSidebar}
@@ -246,7 +246,9 @@
     type="button"
     onclick={toggleSidebar}
     aria-expanded={!isOpen}
-    class="hover:shadow-lg hover:-translate-px relative -right-40 -top-4 p-1 rounded-full transition duration-200 focus:outline-none focus:ring-4 focus:ring-gray-200"
+    class="rounded-xl transition duration-200
+       hover:shadow-[0_0_15px_rgba(156,163,175,0.6)]
+       focus:outline-none focus:ring-4 focus:ring-gray-300 hover:shadow-lg hover:-translate-px relative -right-40 -top-4 p-1 focus:outline-none"
     >
       <img src="/arrow-circle-right.svg" alt="Close navigation menu icon" class="size-10 relative">
     </button>
