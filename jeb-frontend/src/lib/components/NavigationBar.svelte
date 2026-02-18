@@ -88,7 +88,7 @@
 {/snippet}
  
 
-<NavigationMenu.Root class="z-10 inline-flex w-full items-center bg-blue-100 bg-blur-md sticky top-0">
+<NavigationMenu.Root class="z-20 inline-flex w-full items-center bg-blue-200/50 backdrop-blur-sm sticky top-0">
     <div class="float-left ml-4 relative">
       <a href="/" class="inline-flex items-center gap-2">
         <img src={jebLogo} alt="joy eternal bliss logo" class="size-20">
@@ -223,7 +223,7 @@
   </div>
   </div>
 <!-- Mobile Navigation Button -->
-<div class=" absolute right-8 lg:hidden">
+<div class="absolute right-8 z-30 lg:hidden">
   <button
     type="button"
     onclick={toggleSidebar}
@@ -242,10 +242,12 @@
 
 <!-- Sidebar -->
  <!-- Don't use overflow: hidden; that prevents scrolling. -->
-<aside
-  class="fixed overflow-auto top-0 right-0 h-full w-64 backdrop-blur-md bg-blue-100/30 shadow-xl
+<div class="fixed top-0 right-0 z-50 h-dvh w-64
          transition-transform duration-300 ease-in-out
-         {isOpen ? 'translate-x-0' : 'translate-x-full'}"
+         {isOpen ? 'translate-x-0' : 'translate-x-full'}">
+<aside
+  class="z-50 h-full w-full bg-blue-200 overflow-auto"
+  aria-label="Mobile sidebar"
 >
   <div class="p-6 block">
     <button
@@ -344,5 +346,6 @@
     </ul>
   </div>
 </aside>
+</div>
 </div>
 </NavigationMenu.Root>
