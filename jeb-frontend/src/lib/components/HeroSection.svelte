@@ -2,7 +2,7 @@
     import heroSectionImg from "$lib/assets/hero-section.png";
 </script>
 
-<section class="block relative bg-peach-50 overflow-hidden h-dvh">
+<section class="block relative overflow-hidden h-dvh">
     <!--<div class="z-0 w-full h-full">
         <img src={heroSectionImg} alt="Backgroud Depiction of a Gorgeous, Futuristic, and Advanced AI World" class="" />
     </div>-->

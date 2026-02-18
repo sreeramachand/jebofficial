@@ -246,7 +246,7 @@
          transition-transform duration-300 ease-in-out
          {isOpen ? 'translate-x-0' : 'translate-x-full'}">
 <aside
-  class="z-50 h-full w-full bg-blue-200 overflow-auto"
+  class="z-50 h-full w-full bg-blue-50 overflow-auto"
   aria-label="Mobile sidebar"
 >
   <div class="p-6 block">
