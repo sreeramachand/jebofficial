@@ -2,10 +2,32 @@
     import heroSectionImg from "$lib/assets/hero-section.png";
 </script>
 
-<section class="block">
-    <div class="z-0 w-full h-full">
+<section class="block relative bg-peach-50 overflow-hidden h-dvh">
+    <!--<div class="z-0 w-full h-full">
         <img src={heroSectionImg} alt="Backgroud Depiction of a Gorgeous, Futuristic, and Advanced AI World" class="" />
-    </div>
+    </div>-->
+      <!-- flow layer -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -inset-[30%] z-0 opacity-90 blur-[70px]"
+    style="
+      background:
+        radial-gradient(40% 35% at 25% 30%, rgba(255,150,90,.55) 0%, rgba(255,150,90,0) 70%),
+        radial-gradient(45% 40% at 65% 35%, rgba(255,120,70,.35) 0%, rgba(255,120,70,0) 75%),
+        radial-gradient(55% 50% at 45% 70%, rgba(255,180,130,.45) 0%, rgba(255,180,130,0) 70%);
+    "
+  ></div>
+
+  <!-- optional grain -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 z-0 opacity-[0.05] mix-blend-multiply"
+    style="
+      background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22180%22 height=%22180%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22180%22 height=%22180%22 filter=%22url(%23n)%22 opacity=%22.35%22/%3E%3C/svg%3E');
+    "
+  ></div>
+
+    <!-- Content layer -->
     <div class="margin-auto ">
         <div class="flex items-center justify-center">
 
