@@ -88,7 +88,7 @@
 {/snippet}
  
 
-<NavigationMenu.Root class="z-20 inline-flex w-full items-center bg-blue-200/50 backdrop-blur-sm sticky top-0">
+<NavigationMenu.Root class="z-20 inline-flex w-full items-center bg-blue-200/70 backdrop-blur-sm sticky top-0">
     <div class="float-left ml-4 relative">
       <a href="/" class="inline-flex items-center gap-2">
         <img src={jebLogo} alt="joy eternal bliss logo" class="size-20">
@@ -96,7 +96,7 @@
       </a>
     </div>
     <!-- when you add left-[] margins don't work!-->
-   <div id="nav-content" class="ml-64 relative hidden lg:flex">
+   <div id="nav-content" class="relative -right-[25vw] hidden lg:flex">
   <NavigationMenu.List
     class="group flex list-none items-center justify-center p-1 gap-[3.9rem]"
   >

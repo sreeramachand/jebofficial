@@ -28,15 +28,74 @@
   ></div>
 
     <!-- Content layer -->
-    <div class="margin-auto ">
-        <div class="flex items-center justify-center">
+    <div id="hero" class="relative flex items-center justify-center">
+        <div class="flex flex-col items-center justify-center mt-18 max-w-6xl text-center">
+          <div id="label" class="border-2 border-solid border-black rounded-full px-3 py-1 text-[12px] ">
+            A Community for All
+          </div>
+          <div id="headline" class="mt-4" >
+            <h1 class="text-4xl font-['Inter'] font-bold text-center">
+              Discover Yourself in the World of AI with J.E.B!
+            </h1>
+          </div>
+          <div id="hero-vid">
 
+          </div>
+          <div id="buttons flex gap-2">
+            <div id="yt-channel">
+
+            </div>
+            <div id="">
+
+            </div>
+          </div>
         </div>
     </div>
-    <div class="margin-auto ">
-        <div class="flex items-center justify-center">
-
-        </div>
-    </div>
-
 </section>
+
+<div>
+    <!-- Decorative part that transitions from Hero to the Features Section -->
+    <div id="intro-to-features" class="margin-auto ">
+        <div class="flex items-center justify-center">
+
+        </div>
+    </div>
+
+    <!-- Goes Into The Features in More Detail -->
+    <div id="Stories">
+
+    </div>
+    <div id="Quizzes">
+
+    </div>
+    <div id="Storefront">
+
+    </div>
+    <div id="Technology">
+
+    </div>
+
+    <div id="Gaming">
+
+    </div>
+
+    <div id="blog-newsletter">
+
+    </div>
+
+    <!-- Link to Patreon and Buy Me a Coffee -->
+    <div id="Support-Us">
+
+    </div>
+
+    <!-- Sort of like on wave: You didn't start a business to be a bookkeeper. Design with powerful one liner.-->
+    <div id="closing-card">
+
+    </div>
+
+    <!-- Contact Form, links with backend -->
+    <div id="Contact Us">
+
+    </div>
+
+</div>
